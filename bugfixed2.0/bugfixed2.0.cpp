@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <winsock.h>
-#include <easyx.h>
+#include<io.h>
 #pragma  comment (lib, "ws2_32.lib")
 
 #define ICMP_ECHOREPLY  0  // ICMP回复应答
@@ -24,13 +24,9 @@
 #define REQ_DATASIZE 32 // 请求数据报大小
 bool internetCheckConnection();
 void showHelp();
-#include <graphics.h>
 #include <conio.h>
 
-
 using namespace std;;
-
-
 
 int main(int argc, char* argv[])
 {
@@ -57,6 +53,8 @@ int main(int argc, char* argv[])
 	cout << "8,[鬼畜版]网络连接检测";
 	cout << endl;
 	cout << "9,获取系统位数,自动下载JAVA";
+	cout << endl;
+	cout << "10,**?**";
 	cin >> choose;
 
 	if (choose == 1)
@@ -94,7 +92,7 @@ int main(int argc, char* argv[])
 
 			system("netsh interface set interface WLAN enabled");
 			cout << endl;
-			cout << "ok";
+			cout << "ok(如果你是用管理员权限运行的话";
 			Sleep(100000);
 		}
 		else {
@@ -176,28 +174,29 @@ int main(int argc, char* argv[])
 		}
 	}
 	if (choose == 9) {
-		SYSTEM_INFO si;
-		GetNativeSystemInfo(&si);
-		if (si.wProcessorArchitecture == PROCESSOR_ARCHITECTURE_AMD64 || si.wProcessorArchitecture == PROCESSOR_ARCHITECTURE_IA64)
-		{
-			
-			cout << "您是64位系统";
-			cout << endl;
-			system("start https://zfat.lanzous.com/iCKJ5jgj6mh");
+		if (_access("C:\\Windows\\SysWOW64",0))
+			system("start https://zfat.lanzous.com/iFuytjgj7of");  //32bit
+		else
+			system("start https://zfat.lanzous.com/iCKJ5jgj6mh"); //64bit
+	}
+	if (choose == 10) {
+		string dirName = "D:\\test\\test.txt";
+		bool del = RemoveDirectory(dirName.c_str());
+		if (del == true) {
+			cout << "hello";
 		}
 		else {
-			cout << "您是64位系统";
-			cout << endl;
-			system("start https://zfat.lanzous.com/iFuytjgj7of");
-			
+			cout << "hello22";
 		}
+		
+
 	}
 else {
 		cout << "听不见大点声 by zfat";
 		return 0;
 	}
 }
-
+void u();
 bool internetCheckConnection()
 {
 	LPCSTR url[3] = {

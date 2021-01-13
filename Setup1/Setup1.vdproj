@@ -27,12 +27,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_6713B3A2EA164CC2BF3D97AC5597C656"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_67EE9059917A4D72A361450D3CCB6322"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -41,6 +35,12 @@
         {
         "MsmKey" = "8:_93CCAF3F3D3EC9383ACF482B011C2CCD"
         "OwnerKey" = "8:_67EE9059917A4D72A361450D3CCB6322"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A383E27D92E7468582E9E09BB7E7A28E"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -176,26 +176,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6713B3A2EA164CC2BF3D97AC5597C656"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\Desktop\\zfat.ico"
-            "TargetName" = "8:zfat.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_B8C83B2E60884FF4A6B11E04F0F338D4"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_93CCAF3F3D3EC9383ACF482B011C2CCD"
             {
             "SourcePath" = "8:ucrtbased.dll"
@@ -214,6 +194,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A383E27D92E7468582E9E09BB7E7A28E"
+            {
+            "SourcePath" = "8:F:\\zfat.ico"
+            "TargetName" = "8:zfat.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_B8C83B2E60884FF4A6B11E04F0F338D4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E180BB6EDFB2EC89CBB81E7D6831B2D2"
@@ -292,19 +292,19 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:bug修复工具 by zfat"
-        "ProductCode" = "8:{C320DAEC-A97F-4828-9FB3-6B50FB335055}"
-        "PackageCode" = "8:{1F0C1BE3-04F7-415E-B52F-5F940005ECF1}"
+        "ProductCode" = "8:{069A4632-128E-41F6-BA3B-6F970BB2F870}"
+        "PackageCode" = "8:{FE058619-7681-42C0-98ED-92454C49BC9A}"
         "UpgradeCode" = "8:{56541119-C2E6-48CA-98A0-5AC332F253B2}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:3.0.1"
+        "ProductVersion" = "8:9.9.9"
         "Manufacturer" = "8:zfat"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:bug修复工具\u001f"
+        "Title" = "8:Setup1"
         "Subject" = "8:"
         "ARPCONTACT" = "8:zfat"
         "Keywords" = "8:"
@@ -424,7 +424,7 @@
             "Target" = "8:_67EE9059917A4D72A361450D3CCB6322"
             "Folder" = "8:_300470C4054B4CCD9815CD4E7B2C20A7"
             "WorkingFolder" = "8:_B8C83B2E60884FF4A6B11E04F0F338D4"
-            "Icon" = "8:_6713B3A2EA164CC2BF3D97AC5597C656"
+            "Icon" = "8:_A383E27D92E7468582E9E09BB7E7A28E"
             "Feature" = "8:"
             }
         }
