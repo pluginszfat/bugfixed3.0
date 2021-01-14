@@ -15,6 +15,8 @@
 #include <stdlib.h>
 #include <winsock.h>
 #include<io.h>
+#include<UrlMon.h>
+#include<tchar.h>
 #pragma  comment (lib, "ws2_32.lib")
 
 #define ICMP_ECHOREPLY  0  // ICMP回复应答
@@ -54,7 +56,7 @@ int main(int argc, char* argv[])
 	cout << endl;
 	cout << "9,获取系统位数,自动下载JAVA";
 	cout << endl;
-	cout << "10,**?**";
+	cout << "10,鸣谢者名单";
 	cin >> choose;
 
 	if (choose == 1)
@@ -180,16 +182,9 @@ int main(int argc, char* argv[])
 			system("start https://zfat.lanzous.com/iCKJ5jgj6mh"); //64bit
 	}
 	if (choose == 10) {
-		string dirName = "D:\\test\\test.txt";
-		bool del = RemoveDirectory(dirName.c_str());
-		if (del == true) {
-			cout << "hello";
-		}
-		else {
-			cout << "hello22";
-		}
 		
-
+		cout << "╰ゞ耀-浮殤ゝ -- 提供在32位系统测试情况";
+		Sleep(1000000);
 	}
 else {
 		cout << "听不见大点声 by zfat";
