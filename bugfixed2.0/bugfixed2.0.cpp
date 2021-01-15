@@ -17,6 +17,7 @@
 #include<io.h>
 #include<UrlMon.h>
 #include<tchar.h>
+#include <stdio.h>
 #pragma  comment (lib, "ws2_32.lib")
 
 #define ICMP_ECHOREPLY  0  // ICMP回复应答
@@ -29,11 +30,9 @@ void showHelp();
 #include <conio.h>
 
 using namespace std;;
-
 int main(int argc, char* argv[])
 {
 
-	
 	int choose;
 	int b = rand();
 	cout << "输入 by zfat";
@@ -94,8 +93,7 @@ int main(int argc, char* argv[])
 
 			system("netsh interface set interface WLAN enabled");
 			cout << endl;
-			cout << "ok(如果你是用管理员权限运行的话";
-			Sleep(100000);
+			MessageBox(NULL, _T("成功"), _T("dns缓存刷新"), MB_OK);
 		}
 		else {
 
@@ -119,7 +117,7 @@ int main(int argc, char* argv[])
 			if (yes == 2)
 			{
 				system("echo.>C:\\Windows\\System32\\drivers\\etc\\hosts");
-				Sleep(100000);
+				MessageBox(NULL, _T("成功"), _T("hosts内容刷新"), MB_OK);
 			}
 			else {
 
@@ -139,13 +137,13 @@ int main(int argc, char* argv[])
     
         if(internetCheckConnection())
         {
-            printf("网络正常连接！\n");
+			MessageBox(NULL, _T("网络正常连接"), _T("网络连通性检测"), MB_OK);
 			Sleep(100000);
             return 0;
         }
         else
         {
-            printf("网络未正常连接！\n");
+			MessageBox(NULL, _T("网络未正常连接"), _T("网络连通性检测"), MB_OK);
 			Sleep(100000);
             return 0;
         }
@@ -161,8 +159,7 @@ int main(int argc, char* argv[])
 			static int count = 0;
 			if (internetCheckConnection())
 			{
-				printf("网络正常连接！\n");
-				Sleep(100000);
+				MessageBox(NULL, _T("网络正常连接"), _T("网络连通性检测"), MB_OK);
 				return 0;
 			}
 			else
@@ -176,15 +173,25 @@ int main(int argc, char* argv[])
 		}
 	}
 	if (choose == 9) {
-		if (_access("C:\\Windows\\SysWOW64",0))
+		if (_access("C:\\Windows\\SysWOW64", 0))
+		{
+            MessageBox(NULL, _T("已检测您为32位系统"), _T("系统检测"), MB_OK);
 			system("start https://zfat.lanzous.com/iFuytjgj7of");  //32bit
+		}
 		else
+		{
+            MessageBox(NULL, _T("已检测您为64位系统"), _T("系统检测"), MB_OK);
 			system("start https://zfat.lanzous.com/iCKJ5jgj6mh"); //64bit
+		}
+			
 	}
 	if (choose == 10) {
 		
 		cout << "╰ゞ耀-浮殤ゝ -- 提供在32位系统测试情况";
 		Sleep(1000000);
+	}
+	if (choose == 11) {
+
 	}
 else {
 		cout << "听不见大点声 by zfat";
